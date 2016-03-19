@@ -1,28 +1,35 @@
 $(window).load(function() {
   var width = 1000;
 
-  var container = document.getElementById('svg');
-  var svg = container.contentDocument;
+  var container = $('#svg');
+  var svg = container.contents();
 
-  var symmetrySource = svg.getElementById('symmetry-source');
-  var symmetryTarget = svg.getElementById('symmetry-target');
-  var paths = symmetrySource.getElementsByTagName('path');
+  var symmetrySource = svg.find('#symmetry-source');
+  var symmetryTarget = svg.find('#symmetry-target');
+  var elementsToFlip = symmetrySource.find('path, polygon');
 
-  for (var i = 0; i < paths.length; i++) {
-    var original = paths[i];
+  for (var i = 0; i < elementsToFlip.length; i++) {
+    var original = elementsToFlip[i];
     var flipped = original.cloneNode(true);
 
     // flip curve
-    var d = flipped.getAttribute('d');
-    var points = d.split(' ');
+
+    var attr;
+    if (flipped.tagName === 'path') {
+      attr = 'd';
+    } else if (flipped.tagName === 'polygon') {
+      attr = 'points';
+    }
+
+    var points = flipped.getAttribute(attr).split(' ');
     for (var j = 0; j < points.length; j++) {
       var x = points[j].match(/(\d+),/)[1];
       x = width - x;
       points[j] = points[j].replace(/\d+,/, x + ',');
     }
-    d = points.join(' ');
-    flipped.setAttribute('d', d)
+    points = points.join(' ');
+    flipped.setAttribute(attr, points);
 
-    symmetryTarget.appendChild(flipped);
+    symmetryTarget.append(flipped);
   }
 });
