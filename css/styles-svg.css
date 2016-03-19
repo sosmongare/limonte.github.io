@@ -32,6 +32,6 @@ line
   stroke-dasharray: 5,3;
 }
 
-#head path {
+#symmetry-source path, #symmetry-target path {
   stroke: rgba(255, 0, 0, 1);
 }

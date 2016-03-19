@@ -21,8 +21,10 @@
     <line x1="500" y1="0" x2="500" y2="799" />
   </g>
 
-  <g id="head">
+  <g id="symmetry-source">
     <path d="M325,386 C323,194 311,110 500,110" />
-    <path d="M675,386 C677,194 689,110 500,110" />
+  </g>
+
+  <g id="symmetry-target">
   </g>
 </svg>
