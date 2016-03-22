@@ -17,8 +17,10 @@
     <path id="curve" d="M100,250 C100,100 400,100 400,250" />
   </g>
 
-  <g id="center-line">
+  <g id="center">
     <line x1="500" y1="0" x2="500" y2="799" />
+    <polygon points="445,161 500,270 555,161 500,110" class="hover"/>
+    <polygon points="461,341 500,270 539,341 500,410" class="hover"/>
   </g>
 
   <g id="symmetry-source">
@@ -31,10 +33,10 @@
     <path d="M322,528 C323,594 343,637 378,684" />
     <path d="M378,684 C420,745 437,785 500,785" />
 
-    <polygon points="445,161 345,174 500,110" class="hover"/>
-    <polygon points="445,161 345,174 500,270" class="hover"/>
-    <polygon points="461,341 344,174 500,270" class="hover"/>
-    <polygon points="461,341 344,174 354,251" class="hover"/>
+    <polygon points="445,161 347,174 500,110" class="hover"/>
+    <polygon points="445,161 347,174 500,270" class="hover"/>
+    <polygon points="461,341 346,174 500,270" class="hover"/>
+    <polygon points="461,341 346,174 354,251" class="hover"/>
     <polygon points="461,341 381,415 354,251" class="hover"/>
     <polygon points="461,341 381,415 500,410" class="hover"/>
 
