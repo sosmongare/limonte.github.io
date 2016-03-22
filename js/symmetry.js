@@ -23,7 +23,12 @@ $(window).load(function() {
 
     var points = flipped.getAttribute(attr).split(' ');
     for (var j = 0; j < points.length; j++) {
-      var x = points[j].match(/(\d+),/)[1];
+      var x = points[j].match(/(\d+),/);
+      if (x) {
+        x = x[1];
+      } else {
+        continue;
+      }
       x = width - x;
       points[j] = points[j].replace(/\d+,/, x + ',');
     }

@@ -36,4 +36,9 @@ line
   stroke-width: 3;
   stroke: rgba(255, 0, 0, 1);
   fill: none;
+  pointer-events: visible;
+}
+
+#symmetry-source .hover:hover, #symmetry-target .hover:hover {
+  fill: rgba(255, 0, 0, 1);
 }

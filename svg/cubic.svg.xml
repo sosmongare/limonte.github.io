@@ -5,14 +5,14 @@
   <title>SVG curve</title>
   <desc>example curves in SVG</desc>
   <g id="main">
-    <circle id="p1" cx="100" cy="250" r="16" />
-    <circle id="p2" cx="400" cy="250" r="16" />
+    <circle id="p1" cx="100" cy="250" r="4" />
+    <circle id="p2" cx="200" cy="250" r="4" />
 
-    <circle id="c1" cx="100" cy="100" r="8" />
-    <circle id="c2" cx="400" cy="100" r="8" />
+    <circle id="c1" cx="100" cy="100" r="2" />
+    <circle id="c2" cx="200" cy="100" r="2" />
 
     <line id="l1" x1="100" y1="250" x2="100" y2="100" />
-    <line id="l2" x1="400" y1="250" x2="400" y2="100" />
+    <line id="l2" x1="200" y1="250" x2="200" y2="100" />
 
     <path id="curve" d="M100,250 C100,100 400,100 400,250" />
   </g>
@@ -22,7 +22,8 @@
   </g>
 
   <g id="symmetry-source">
-    <path d="M325,386 C323,194 311,110 500,110" />
+    <path d="M344,174 C370,118 411,115 500,108 Z" class="hover" />
+    <path d="M324,387 C326,282 318,240 343,175" />
     <path d="M291,407 C280,382 304,360 324,387" />
     <path d="M291,408 C306,443 295,444 296,463" />
     <path d="M296,464 C299,483 314,481 313,512" />
@@ -30,12 +31,17 @@
     <path d="M322,528 C323,594 343,637 378,684" />
     <path d="M378,684 C420,745 437,785 500,785" />
 
-    <polygon points="445,161 345,174 500,110" />
-    <polygon points="445,161 345,174 500,270" />
-    <polygon points="461,341 344,174 500,270" />
-    <polygon points="461,341 344,174 354,251" />
-    <polygon points="461,341 381,415 354,251" />
-    <polygon points="461,341 381,415 500,410" />
+    <polygon points="445,161 345,174 500,110" class="hover"/>
+    <polygon points="445,161 345,174 500,270" class="hover"/>
+    <polygon points="461,341 344,174 500,270" class="hover"/>
+    <polygon points="461,341 344,174 354,251" class="hover"/>
+    <polygon points="461,341 381,415 354,251" class="hover"/>
+    <polygon points="461,341 381,415 500,410" class="hover"/>
+
+    <path d="M307,433 C310,419 307,411 302,404" />
+    <path d="M302,404 C292,389 309,381 312,395" />
+    <path d="M312,394 C321,415 321,424 319,441" />
+    <path d="M319,441 C312,453 313,459 321,470" />
   </g>
 
   <g id="symmetry-target">
