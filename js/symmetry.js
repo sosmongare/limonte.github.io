@@ -6,7 +6,7 @@ $(window).load(function() {
 
   var symmetrySource = svg.find('#symmetry-source');
   var symmetryTarget = svg.find('#symmetry-target');
-  var elementsToFlip = symmetrySource.find('path, polygon');
+  var elementsToFlip = symmetrySource.find('path, polygon, line');
 
   for (var i = 0; i < elementsToFlip.length; i++) {
     var original = elementsToFlip[i];
@@ -14,26 +14,34 @@ $(window).load(function() {
 
     // flip curve
 
-    var attr;
-    if (flipped.tagName === 'path') {
-      attr = 'd';
-    } else if (flipped.tagName === 'polygon') {
-      attr = 'points';
-    }
+    if (flipped.tagName === 'line') {
+      var x1 = width - flipped.getAttribute('x1');
+      var x2 = width - flipped.getAttribute('x2');
+      flipped.setAttribute('x1', x1);
+      flipped.setAttribute('x2', x2);
 
-    var points = flipped.getAttribute(attr).split(' ');
-    for (var j = 0; j < points.length; j++) {
-      var x = points[j].match(/(\d+),/);
-      if (x) {
-        x = x[1];
-      } else {
-        continue;
+    } else {
+      var attr;
+      if (flipped.tagName === 'path') {
+        attr = 'd';
+      } else if (flipped.tagName === 'polygon') {
+        attr = 'points';
       }
-      x = width - x;
-      points[j] = points[j].replace(/\d+,/, x + ',');
+
+      var points = flipped.getAttribute(attr).split(' ');
+      for (var j = 0; j < points.length; j++) {
+        var x = points[j].match(/(\d+),/);
+        if (x) {
+          x = x[1];
+        } else {
+          continue;
+        }
+        x = width - x;
+        points[j] = points[j].replace(/\d+,/, x + ',');
+      }
+      points = points.join(' ');
+      flipped.setAttribute(attr, points);
     }
-    points = points.join(' ');
-    flipped.setAttribute(attr, points);
 
     symmetryTarget.append(flipped);
   }

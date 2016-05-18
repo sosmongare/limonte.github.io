@@ -4,7 +4,7 @@
 }
 
 body {
-  /*background: #000;*/
+  background: #000;
   background: #000 url('/i/head.jpg') center top no-repeat;
   background-size: 1500px;
   position: relative;

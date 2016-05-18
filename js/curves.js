@@ -56,7 +56,9 @@
 
     // show code
     if (code) {
-      code.textContent = '<path d="'+d+'" />';
+      code.textContent = '<path d="' + d + '" />';
+      code.textContent += "\n";
+      code.textContent += '<line x1="' + point.c1.x + '" y1="' + point.c1.y + '" x2="' + point.c2.x + '" y2="' + point.c2.y + '" />';
     }
   }
 
@@ -119,5 +121,14 @@
       Init();
     }
   }
+
+  document.body.addEventListener('keydown', function (e) {
+    if (e.keyCode === 81) { // q
+      var container = $('#svg');
+      var svg = container.contents();
+
+      var symmetrySource = svg.find('#main').remove();
+    }
+  });
 
 })();

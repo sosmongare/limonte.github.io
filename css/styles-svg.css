@@ -24,7 +24,7 @@ circle:hover
   cursor: move;
 }
 
-line
+#main line, #center line
 {
   stroke-width: 2;
   stroke: #999;
@@ -32,7 +32,10 @@ line
   stroke-dasharray: 5,5;
 }
 
-#symmetry-source path, #symmetry-target path, #symmetry-source polygon, #symmetry-target polygon, #center polygon {
+#symmetry-source path, #symmetry-target path,
+#symmetry-source polygon, #symmetry-target polygon,
+#symmetry-source line, #symmetry-target line,
+#center polygon {
   stroke-width: 3;
   stroke: rgba(255, 0, 0, 1);
   fill: none;
