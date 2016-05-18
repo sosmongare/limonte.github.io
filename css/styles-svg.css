@@ -45,3 +45,7 @@ circle:hover
 #symmetry-source .hover:hover, #symmetry-target .hover:hover, #center .hover:hover {
   fill: rgba(255, 0, 0, 1);
 }
+
+#symmetry-source .filled, #symmetry-target .filled {
+  fill: rgba(255, 0, 0, 1);
+}
