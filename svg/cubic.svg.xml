@@ -4,7 +4,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 999 799" preserveAspectRatio="xMidYMid meet">
   <title>SVG curve</title>
   <desc>example curves in SVG</desc>
-  <g id="main">
+  <!--g id="main">
     <circle id="p1" cx="450" cy="650" r="4" />
     <circle id="p2" cx="550" cy="650" r="4" />
 
@@ -15,10 +15,9 @@
     <line id="l2" x1="200" y1="250" x2="200" y2="100" />
 
     <path id="curve" d="M100,250 C100,100 400,100 400,250" />
-  </g>
+  </g-->
 
   <g id="center">
-    <line x1="500" y1="0" x2="500" y2="799" />
     <polygon points="445,161 500,270 555,161 500,110" class="hover"/>
     <polygon points="461,341 500,270 539,341 500,410" class="hover"/>
 

@@ -18,7 +18,13 @@ body {
   margin-left: -500px;
   width: 1000px;
   height: 800px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0);
+  animation: levitate 3s alternate ease-in-out infinite;
+}
+
+@keyframes levitate {
+  0% { transform: translate(0, -50px); }
+  100% { transform: translate(0, 0px); }
 }
 
 #code
