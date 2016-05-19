@@ -6,7 +6,7 @@ $(window).load(function() {
 
   var symmetrySource = svg.find('#symmetry-source');
   var symmetryTarget = svg.find('#symmetry-target');
-  var elementsToFlip = symmetrySource.find('path, polygon, line');
+  var elementsToFlip = symmetrySource.find('path, polygon, line, circle');
 
   for (var i = 0; i < elementsToFlip.length; i++) {
     var original = elementsToFlip[i];
@@ -19,6 +19,10 @@ $(window).load(function() {
       var x2 = width - flipped.getAttribute('x2');
       flipped.setAttribute('x1', x1);
       flipped.setAttribute('x2', x2);
+
+    } else if (flipped.tagName === 'circle') {
+      var cx = width - flipped.getAttribute('cx');
+      flipped.setAttribute('cx', cx);
 
     } else {
       var attr;
