@@ -27,7 +27,7 @@ $(window).load(function() {
   var container = $('#svg');
   var svg = container.contents();
 
-  svg.on('click touchstart', '.skill', function() {
+  svg.on('click touchstart', '.skill:not(.current)', function() {
     svg.find('.skill').removeClass('current');
     $(this).addClass('active current');
 
@@ -39,7 +39,7 @@ $(window).load(function() {
     block.css({
       width: 0,
       height: 3,
-      left: 900
+      left: '55%'
     });
     block.animate({
       width: blockWidth
