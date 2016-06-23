@@ -29,7 +29,24 @@ $(window).load(function() {
     zippi.play();
   });
 
-  var backgroundMusic = new Audio('/mp3/The_Commission_Creton.mp3');
-  backgroundMusic.volume = 0.5;
-  backgroundMusic.play();
+});
+
+var vm = new Vue({
+  el: '#app',
+  data: {
+    sound: true,
+    backgroundMusic: new Audio('/mp3/The_Commission_Creton.mp3')
+  },
+  created: function() {
+    this.backgroundMusic.volume = 0.5;
+    this.backgroundMusic.play();
+  }
+});
+
+vm.$watch('sound', function(sound) {
+  if (sound) {
+    this.backgroundMusic.play();
+  } else {
+    this.backgroundMusic.pause();
+  }
 });
