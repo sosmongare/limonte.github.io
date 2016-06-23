@@ -1,3 +1,28 @@
+var data = {
+  sound: localStorage.getItem('sound')? JSON.parse(localStorage.getItem('sound')) : true,
+  backgroundMusic: new Audio('/mp3/The_Commission_Creton.mp3')
+};
+
+var vm = new Vue({
+  el: '#app',
+  data: data,
+  created: function() {
+    this.backgroundMusic.volume = 0.5;
+    if (this.sound) {
+      this.backgroundMusic.play();
+    }
+  }
+});
+
+vm.$watch('sound', function(sound) {
+  if (sound) {
+    this.backgroundMusic.play();
+  } else {
+    this.backgroundMusic.pause();
+  }
+  localStorage.setItem('sound', sound);
+});
+
 $(window).load(function() {
   var container = $('#svg');
   var svg = container.contents();
@@ -24,29 +49,27 @@ $(window).load(function() {
       }, 150);
     });
 
-    var zippi = new Audio('/mp3/zippi.mp3');
-    zippi.volume = 0.3;
-    zippi.play();
+    if (data.sound) {
+      var zippi = new Audio('/mp3/zippi.mp3');
+      zippi.volume = 0.3;
+      zippi.play();
+    }
   });
 
 });
 
-var vm = new Vue({
-  el: '#app',
-  data: {
-    sound: true,
-    backgroundMusic: new Audio('/mp3/The_Commission_Creton.mp3')
-  },
-  created: function() {
-    this.backgroundMusic.volume = 0.5;
-    this.backgroundMusic.play();
-  }
-});
-
-vm.$watch('sound', function(sound) {
-  if (sound) {
-    this.backgroundMusic.play();
-  } else {
-    this.backgroundMusic.pause();
-  }
-});
+/*console.log(`        ..
+      ..  ..
+            ..
+             ..
+            ..
+           ..
+         ..
+##       ..   ####
+##............##  ##
+##...COFFEE...##   ##
+##..KEEPS.ME..## ##
+##....WARM....###
+ ##...........##
+  ############
+`);*/
