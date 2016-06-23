@@ -27,6 +27,14 @@ body {
   100% { transform: translate(0, 0px); }
 }
 
+#volume {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  font-size: 3em;
+  color: #663;
+}
+
 #code
 {
   display: block;

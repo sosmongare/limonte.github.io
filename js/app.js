@@ -3,7 +3,8 @@ $(window).load(function() {
   var svg = container.contents();
 
   svg.on('click touchstart', '.skill', function() {
-    $(this).addClass('active');
+    svg.find('.skill').removeClass('current');
+    $(this).addClass('active current');
 
     $('.skill').css('left', -999);
     var skill = $(this).attr('id');

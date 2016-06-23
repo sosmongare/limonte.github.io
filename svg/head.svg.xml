@@ -40,7 +40,7 @@
 
     <polygon points="445,161 347,174 500,110" class="skill"/>
     <polygon points="445,161 347,174 500,270" class="skill" id="frontend" symmetry-id="frontend-design"/>
-    <polygon points="461,341 346,174 500,270" class="skill" id="security" symmetry-id="1as"/>
+    <polygon points="461,341 346,174 500,270" class="skill" id="security" symmetry-id="social"/>
     <polygon points="461,341 346,174 354,251" class="skill" id="backend-frameworks" symmetry-id="frontend-frameworks"/>
     <polygon points="461,341 381,415 354,251" class="skill"/>
     <polygon points="461,341 381,415 500,410" class="skill"/>
