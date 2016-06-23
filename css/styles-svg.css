@@ -23,10 +23,10 @@ circle
   fill: rgba(255, 255, 255, 0.1);
 }
 
-circle:hover
+/*circle:hover
 {
   cursor: move;
-}
+}*/
 
 #main line, #center line
 {
@@ -53,21 +53,16 @@ circle:hover
 }
 
 #symmetry-source .skill:hover, #symmetry-target .skill:hover, #center .skill:hover {
-  /*fill: rgba(255, 0, 0, 1);*/
-  fill: #faff1e;
+  fill: #ff6600 !important;
+}
+
+#symmetry-source .skill.active, #symmetry-target .skill.active, #center .skill.active {
+  fill: #cc3300;
 }
 
 #symmetry-source .filled, #symmetry-target .filled {
   /*fill: rgba(255, 0, 0, 1);*/
   fill: #faff1e;
-}
-
-.top-offset {
-  transform: translate(0, 300px);
-}
-
-#skill {
-  animation: zoomin 2s ease-in-out;
 }
 
 @keyframes zoomin {

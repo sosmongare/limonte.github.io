@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-stylesheet href="/css/styles-svg.css" type="text/css"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 999 1099" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 999 799" preserveAspectRatio="xMidYMid meet">
   <title>SVG curve</title>
   <desc>example curves in SVG</desc>
   <!--g id="main">
@@ -18,8 +18,8 @@
   </g-->
 
   <g id="center">
-    <polygon points="445,161 500,270 555,161 500,110" class="skill"/>
-    <polygon points="461,341 500,270 539,341 500,410" class="skill"/>
+    <polygon points="445,161 500,270 555,161 500,110" class="skill" id="php"/>
+    <polygon points="461,341 500,270 539,341 500,410" class="skill" id="db"/>
 
     <polygon points="500,505 490,525 500,551 510,525"/>
     <polygon points="500,517 496,525 500,536 504,525"/>
@@ -39,9 +39,9 @@
     <path d="M378,684 C420,745 437,785 500,785" />
 
     <polygon points="445,161 347,174 500,110" class="skill"/>
-    <polygon points="445,161 347,174 500,270" class="skill"/>
-    <polygon points="461,341 346,174 500,270" class="skill"/>
-    <polygon points="461,341 346,174 354,251" class="skill"/>
+    <polygon points="445,161 347,174 500,270" class="skill" id="frontend" symmetry-id="frontend-design"/>
+    <polygon points="461,341 346,174 500,270" class="skill" id="security" symmetry-id="1as"/>
+    <polygon points="461,341 346,174 354,251" class="skill" id="backend-frameworks" symmetry-id="frontend-frameworks"/>
     <polygon points="461,341 381,415 354,251" class="skill"/>
     <polygon points="461,341 381,415 500,410" class="skill"/>
 
@@ -83,8 +83,8 @@
     <line x1="442" y1="618" x2="477" y2="627" />
     <line x1="442" y1="618" x2="482" y2="658" />
 
-    <line x1="638" y1="426" x2="646" y2="255" />
-    <line x1="668" y1="213" x2="646" y2="250" />
+    <line x1="362" y1="426" x2="354" y2="255" />
+    <line x1="332" y1="213" x2="354" y2="250" />
     <line x1="396" y1="646" x2="413" y2="526" />
     <line x1="357" y1="571" x2="334" y2="470" />
 
@@ -114,8 +114,8 @@
     <path d="M376,469 C384,476 386,479 399,483" />
     <path d="M398,461 C394,468 393,474 399,483" />
 
-    <path d="M551,472 C558,479 561,483 573,484" />
-    <path d="M569,464 C566,472 567,477 573,484" />
+    <path d="M449,472 C442,479 439,483 427,484" />
+    <path d="M431,464 C434,472 433,477 427,484" />
 
     <line x1="322" y1="529" x2="322" y2="470" />
     <line x1="449" y1="673" x2="484" y2="702" />

@@ -11,6 +11,9 @@ $(window).load(function() {
   for (var i = 0; i < elementsToFlip.length; i++) {
     var original = elementsToFlip[i];
     var flipped = original.cloneNode(true);
+    if (original.getAttribute('symmetry-id')) {
+      flipped.setAttribute('id', original.getAttribute('symmetry-id'));
+    }
 
     // flip curve
 
