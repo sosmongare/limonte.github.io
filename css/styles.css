@@ -97,6 +97,17 @@ body {
 }
 
 .progress {
-  display: block;
-  margin: 15px 20px;
+  margin: 4px 0 0 10px;
+  font-weight: 600;
+  color: #50d050;
+  float: right;
+}
+
+.progress i {
+  font-style: normal;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0.0; }
 }
