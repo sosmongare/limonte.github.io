@@ -56,6 +56,20 @@ $(window).load(function() {
     }
   });
 
+  var brainParts = svg.find('.skill');
+  var highlightBrainParts = function(depth) {
+    if (depth > 20) {
+      return;
+    }
+    var index = parseInt(Math.random() * brainParts.length, 10);
+    $(brainParts[index]).addClass('active');
+    setTimeout(function() {
+      $(brainParts[index]).removeClass('active');
+      highlightBrainParts(depth + 1);
+    }, 50);
+  };
+
+  highlightBrainParts(0);
 });
 
 /*console.log(`        ..
