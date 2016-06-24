@@ -111,3 +111,17 @@ body {
 @keyframes blinker {
   50% { opacity: 0.0; }
 }
+
+.so-badge-tag {
+  font-size: 0.8em;
+  color: #535a60 !important;
+  background: #eff0f1 url(/i/so-favicon.png) 8px center no-repeat;
+  text-decoration: none;
+  padding: 5px 10px 5px 30px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.so-badge-tag.gold {
+  color: #ffcc00;
+}
