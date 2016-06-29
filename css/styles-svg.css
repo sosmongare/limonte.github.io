@@ -1,4 +1,3 @@
-/* SVG styles */
 g {
   transition: all 1s;
 }
@@ -23,11 +22,6 @@ circle
   fill: rgba(255, 255, 255, 0.1);
 }
 
-/*circle:hover
-{
-  cursor: move;
-}*/
-
 #main line, #center line
 {
   stroke-width: 2;
@@ -42,7 +36,6 @@ circle
 #symmetry-source circle, #symmetry-target circle,
 #center polygon {
   stroke-width: 2;
-  /*stroke: rgba(255, 0, 0, 1);*/
   stroke: #faff1e;
   fill: none;
   pointer-events: visible;
@@ -62,7 +55,6 @@ circle
 }
 
 #symmetry-source .filled, #symmetry-target .filled {
-  /*fill: rgba(255, 0, 0, 1);*/
   fill: #faff1e;
 }
 
