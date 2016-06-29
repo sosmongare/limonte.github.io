@@ -27,6 +27,8 @@ vm.$watch('sound', function(sound) {
 $(window).on('load', function() {
   var container = $('#svg');
   var svg = container.contents();
+  var zippi = new Audio('/mp3/zippi.mp3');
+  zippi.volume = 0.3;
 
   svg.on('click touchstart', '.skill:not(.current)', function() {
     svg.find('.skill').removeClass('current');
@@ -51,8 +53,6 @@ $(window).on('load', function() {
     });
 
     if (data.sound) {
-      var zippi = new Audio('/mp3/zippi.mp3');
-      zippi.volume = 0.3;
       zippi.play();
     }
   });
