@@ -41,7 +41,7 @@ circle
 #symmetry-source line, #symmetry-target line,
 #symmetry-source circle, #symmetry-target circle,
 #center polygon {
-  stroke-width: 3;
+  stroke-width: 2;
   /*stroke: rgba(255, 0, 0, 1);*/
   stroke: #faff1e;
   fill: none;
