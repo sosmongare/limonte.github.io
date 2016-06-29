@@ -40,7 +40,7 @@ $(window).on('load', function() {
     block.css({
       width: 0,
       height: 3,
-      left: '55%'
+      left: '50%'
     });
     block.animate({
       width: blockWidth
