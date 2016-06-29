@@ -8,6 +8,7 @@ var vm = new Vue({
   data: data,
   created: function() {
     this.backgroundMusic.volume = 0.5;
+    this.backgroundMusic.loop = true;
     if (this.sound) {
       this.backgroundMusic.play();
     }
