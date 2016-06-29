@@ -104,14 +104,14 @@ body {
   padding: 0;
 }
 
-.progress {
+pre {
   margin: 4px 0 0 10px;
   font-weight: 600;
   color: #50d050;
   float: right;
 }
 
-.progress i {
+pre i {
   font-style: normal;
   animation: blinker 1s linear infinite;
 }
