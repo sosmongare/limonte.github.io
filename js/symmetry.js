@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(window).on('load', function() {
   var width = 1000;
 
   var container = $('#svg');

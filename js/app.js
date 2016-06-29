@@ -23,7 +23,7 @@ vm.$watch('sound', function(sound) {
   localStorage.setItem('sound', sound);
 });
 
-$(window).load(function() {
+$(window).on('load', function() {
   var container = $('#svg');
   var svg = container.contents();
 
@@ -72,7 +72,7 @@ $(window).load(function() {
   highlightBrainParts(0);
 });
 
-/*console.log(`        ..
+console.log(`        ..
       ..  ..
             ..
              ..
@@ -86,4 +86,4 @@ $(window).load(function() {
 ##....WARM....###
  ##...........##
   ############
-`);*/
+`);
