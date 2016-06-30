@@ -18,7 +18,7 @@
   </g-->
 
   <g id="center">
-    <polygon points="445,161 500,270 555,161 500,110" class="skill" id="php"/>
+    <polygon points="445,175 500,270 555,175 500,110" class="skill" id="php"/>
     <polygon points="461,341 500,270 539,341 500,410" class="skill" id="db"/>
 
     <polygon points="500,505 490,525 500,551 510,525"/>
@@ -38,11 +38,11 @@
     <path d="M322,528 C323,594 343,637 378,684" />
     <path d="M378,684 C420,745 437,785 500,785" />
 
-    <polygon points="445,161 345,174 500,108" class="skill" id="seo" symmetry-id="api"/>
-    <polygon points="445,161 347,174 500,270" class="skill" id="frontend" symmetry-id="design"/>
+    <polygon points="445,175 345,174 500,108" class="skill" id="seo" symmetry-id="api"/>
+    <polygon points="445,175 347,174 500,270" class="skill" id="frontend" symmetry-id="design"/>
     <polygon points="461,341 346,174 500,270" class="skill" id="security" symmetry-id="social"/>
-    <polygon points="461,341 346,174 354,251" class="skill" id="backend-frameworks" symmetry-id="frontend-frameworks"/>
-    <polygon points="461,341 381,415 354,251" class="skill" id="server-administration" symmetry-id="tools"/>
+    <polygon points="461,341 346,174 358,271" class="skill" id="backend-frameworks" symmetry-id="frontend-frameworks"/>
+    <polygon points="461,341 381,415 358,271" class="skill" id="server-administration" symmetry-id="tools"/>
     <polygon points="461,341 381,415 500,410" class="skill" id="performance" symmetry-id="communication" />
 
     <path d="M307,433 C310,419 307,411 302,404" />
@@ -83,7 +83,7 @@
     <line x1="442" y1="618" x2="477" y2="627" />
     <line x1="442" y1="618" x2="482" y2="658" />
 
-    <line x1="362" y1="426" x2="354" y2="255" />
+    <line x1="362" y1="426" x2="357" y2="264" />
     <line x1="332" y1="213" x2="354" y2="250" />
     <line x1="396" y1="646" x2="413" y2="526" />
     <line x1="357" y1="571" x2="334" y2="470" />
