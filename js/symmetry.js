@@ -1,7 +1,6 @@
 $(window).on('load', function() {
-  var width = 1000;
-
   var container = $('#svg');
+  var width = Math.round(container.width());
   var svg = container.contents();
 
   var symmetrySource = svg.find('#symmetry-source');
@@ -15,18 +14,19 @@ $(window).on('load', function() {
       flipped.setAttribute('id', original.getAttribute('symmetry-id'));
     }
 
-    // flip curve
-
+    // flip line
     if (flipped.tagName === 'line') {
       var x1 = width - flipped.getAttribute('x1');
       var x2 = width - flipped.getAttribute('x2');
       flipped.setAttribute('x1', x1);
       flipped.setAttribute('x2', x2);
 
+    // flip circle
     } else if (flipped.tagName === 'circle') {
       var cx = width - flipped.getAttribute('cx');
       flipped.setAttribute('cx', cx);
 
+    // flip path, polygon
     } else {
       var attr;
       if (flipped.tagName === 'path') {
