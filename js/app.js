@@ -25,8 +25,7 @@ vm.$watch('sound', function(sound) {
 });
 
 $(window).on('load', function() {
-  var container = $('#svg');
-  var svg = container.contents();
+  var svg = $('#svg').contents();
   var zippi = new Audio('/mp3/zippi.mp3');
   zippi.volume = 0.3;
 
@@ -34,29 +33,35 @@ $(window).on('load', function() {
     svg.find('.skill').removeClass('current');
     $(this).addClass('active current');
 
+    // detect block dimensions
     $('.skill').css('left', -999);
-    var skill = $(this).attr('id');
-    var block = $('.skill.' + skill);
+    var skillName = $(this).attr('id');
+    var block = $('.skill.' + skillName);
     var blockWidth = block.width();
     var blockHeight = block.height();
+
+    // set initial dimensions for animation
     block.css({
       width: 0,
       height: 3,
       left: '50%'
     });
-    block.animate({
-      width: blockWidth
-    }, 150, function() {
-      $(this).animate({
-        height: blockHeight
-      }, 150);
-    });
+
+    block.animate(
+      // first, animate block horizontally
+      {width: blockWidth}, 150,
+      function() {
+        // then vertically
+        $(this).animate({height: blockHeight}, 150);
+      }
+    );
 
     if (data.sound) {
       zippi.play();
     }
   });
 
+  // initial hightlight brain triangles, little bit of recursion here :)
   var brainParts = svg.find('.skill');
   var highlightBrainParts = function(depth) {
     if (depth > 20) {
