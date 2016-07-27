@@ -45,6 +45,10 @@ circle
   stroke-width: 5;
 }
 
+#symmetry-source .skill, #symmetry-target .skill, #center .skill {
+  cursor: pointer;
+}
+
 #symmetry-source .skill:hover, #symmetry-target .skill:hover, #center .skill:hover,
 #symmetry-source .skill.current, #symmetry-target .skill.current, #center .skill.current {
   fill: #ff6600 !important;
