@@ -1,70 +1,26 @@
-g {
-  transition: all 1s;
-}
-
-path
-{
-  stroke-width: 4;
-  stroke: rgba(255, 0, 0, 0.5);
-  stroke-linecap: round;
-  fill: none;
-}
-
-path.fill
-{
-  fill: #3ff;
-}
-
-circle
-{
-  stroke-width: 2;
-  stroke: #c00;
-  fill: rgba(255, 255, 255, 0.1);
-}
-
-#main line, #center line
-{
-  stroke-width: 2;
-  stroke: #999;
-  stroke-linecap: round;
-  stroke-dasharray: 5,5;
-}
-
-#symmetry-source path, #symmetry-target path,
-#symmetry-source polygon, #symmetry-target polygon,
-#symmetry-source line, #symmetry-target line,
-#symmetry-source circle, #symmetry-target circle,
-#center polygon {
+path, polygon, line, circle {
   stroke-width: 2;
   stroke: #faff1e;
   fill: none;
   pointer-events: visible;
 }
 
-#symmetry-source circle, #symmetry-target circle {
+circle {
   stroke-width: 5;
 }
 
-#symmetry-source .skill, #symmetry-target .skill, #center .skill {
+.skill {
   cursor: pointer;
 }
 
-#symmetry-source .skill:hover, #symmetry-target .skill:hover, #center .skill:hover,
-#symmetry-source .skill.current, #symmetry-target .skill.current, #center .skill.current {
+.skill:hover, .skill.current {
   fill: #ff6600 !important;
 }
 
-#symmetry-source .skill.active, #symmetry-target .skill.active, #center .skill.active {
+.skill.active {
   fill: #cc3300;
 }
 
-#symmetry-source .filled, #symmetry-target .filled {
+.filled {
   fill: #faff1e;
-}
-
-@keyframes zoomin {
-  0% { transform: scale(1); }
-  100% {
-    transform: translate(-500px, -170px) scale(2);
-  }
 }

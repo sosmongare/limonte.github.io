@@ -33,26 +33,26 @@ $(window).on('load', function() {
     svg.find('.skill').removeClass('current');
     $(this).addClass('active current');
 
-    // detect block dimensions
-    $('.skill').css('left', -999);
+    // detect box dimensions
+    $('.skillBox').css('left', -999);
     var skillName = $(this).attr('id');
-    var block = $('.skill.' + skillName);
-    var blockWidth = block.width();
-    var blockHeight = block.height();
+    var box = $('.skillBox.' + skillName);
+    var boxWidth = box.width();
+    var boxHeight = box.height();
 
     // set initial dimensions for animation
-    block.css({
+    box.css({
       width: 0,
       height: 3,
       left: '50%'
     });
 
-    block.animate(
-      // first, animate block horizontally
-      {width: blockWidth}, 150,
+    box.animate(
+      // first, animate box horizontally
+      {width: boxWidth}, 150,
       function() {
         // then vertically
-        $(this).animate({height: blockHeight}, 150);
+        $(this).animate({height: boxHeight}, 150);
       }
     );
 

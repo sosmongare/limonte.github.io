@@ -58,7 +58,7 @@ body {
   overflow: auto;
 }
 
-.skill {
+.skillBox {
   position: absolute;
   top: 100px;
   background-color: #151515;
@@ -70,32 +70,32 @@ body {
   left: -999px;
   box-sizing: border-box;
   white-space: nowrap;
-  animation: skillLevitate 5s alternate ease-in-out infinite;
+  animation: skillBoxLevitate 5s alternate ease-in-out infinite;
 }
 
-@keyframes skillLevitate {
+@keyframes skillBoxLevitate {
   0% { transform: translate(0, -20px); }
   100% { transform: translate(0, 0px); }
 }
 
-.skill h2 {
+.skillBox h2 {
   margin: 16px 20px;
 }
 
-.skill a {
+.skillBox a {
   color: #ffdf4f;
 }
 
-.skill > span {
+.skillBox > span {
   display: block;
   margin: 20px 30px;
 }
 
-.skill .left-offset {
+.skillBox .left-offset {
   margin: 20px 20px 20px 40px;
 }
 
-.skill hr {
+.skillBox hr {
   display: block;
   height: 1px;
   border: 0;
