@@ -11,16 +11,31 @@ circle {
 
 .skill {
   cursor: pointer;
+  animation: pulsing 5s linear infinite;
 }
 
 .skill:hover, .skill.current {
   fill: #ff6600 !important;
+  animation: none;
 }
 
 .skill.active {
   fill: #cc3300;
+  animation: none;
 }
 
 .filled {
   fill: #faff1e;
+}
+
+@keyframes pulsing {
+  0% {
+    fill: rgba(255, 100, 0, .4);
+  }
+  20% {
+    fill: rgba(255, 100, 0, .1);
+  }
+  100% {
+    fill: rgba(255, 100, 0, .4);
+  }
 }
