@@ -39,3 +39,7 @@ circle {
     fill: rgba(255, 100, 0, .4);
   }
 }
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
