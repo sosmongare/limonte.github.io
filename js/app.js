@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             box.style.height = '3px';
             box.style.left = '50%';
 
-            animateBoxWidth(box, boxWidth).then(function() {
-              animateBoxHeight(box, boxHeight);
+            TinyAnimate.animateCSS(box, 'width', 'px', 0, boxWidth, 220, 'easeOutQuad', function() {
+              TinyAnimate.animateCSS(box, 'height', 'px', 3, boxHeight, 220, 'easeOutQuad');
             });
           }
         });
@@ -129,35 +129,6 @@ function symmetry(svg) {
 
     symmetryTarget.appendChild(flipped);
   }
-}
-
-function animateBoxWidth(box, boxWidth) {
-  return new Promise(function(resolve) {
-    var interval = setInterval(function() {
-      var width = parseInt(box.style.width, 10);
-
-      if (width >= boxWidth) {
-        clearInterval(interval);
-        resolve();
-        return;
-      }
-
-      box.style.width = (width + 10) + 'px';
-    }, 1);
-  });
-}
-
-function animateBoxHeight(box, boxHeight) {
-  var interval = setInterval(function() {
-    var height = parseInt(box.style.height, 10);
-
-    if (height >= boxHeight) {
-      clearInterval(interval);
-      return;
-    }
-
-    box.style.height = (height + 10) + 'px';
-  }, 1);
 }
 
 console.log(`        ..
