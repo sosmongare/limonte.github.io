@@ -39,6 +39,10 @@ body {
   cursor: pointer;
 }
 
+#volume i[class*="fa-volume-"] {
+  width: 60px;
+}
+
 #code
 {
   display: block;
