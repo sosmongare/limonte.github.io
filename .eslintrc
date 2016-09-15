@@ -53,7 +53,6 @@
     'no-implied-eval': 2,            // http://eslint.org/docs/rules/no-implied-eval
     'no-lone-blocks': 2,             // http://eslint.org/docs/rules/no-lone-blocks
     'no-native-reassign': 2,         // http://eslint.org/docs/rules/no-native-reassign
-    'no-new': 2,                     // http://eslint.org/docs/rules/no-new
     'no-new-func': 2,                // http://eslint.org/docs/rules/no-new-func
     'no-new-wrappers': 2,            // http://eslint.org/docs/rules/no-new-wrappers
     'no-octal': 2,                   // http://eslint.org/docs/rules/no-octal

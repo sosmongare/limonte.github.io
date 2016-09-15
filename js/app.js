@@ -74,6 +74,19 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     };
   }, false);
+
+  new Granim({
+    element: '#background-gradient',
+    opacity: [1, 1],
+    states: {
+      'default-state': {
+        gradients: [
+          ['#000000', '#0B1621'],
+          ['#010F1C', '#0C0813']
+        ]
+      }
+    }
+  });
 });
 
 function symmetry(svg) {
