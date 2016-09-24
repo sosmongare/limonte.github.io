@@ -36,12 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
           '</span>'
       }
     },
+    methods: {
+      fetchData: function() {
+        this.$http.get('https://api.github.com/repos/limonte/sweetalert2').then(function(response) {
+          this.$set('sweetalert2', response.data);
+        });
+      }
+    },
     created: function() {
       this.backgroundMusic.volume = 0.5;
       this.backgroundMusic.loop = true;
       if (this.sound) {
         this.backgroundMusic.play();
       }
+      this.fetchData();
     }
   });
 

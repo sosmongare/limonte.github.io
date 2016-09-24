@@ -12,6 +12,7 @@
   <meta property="og:image" content="/i/apple-touch-icon.png">
   <meta property="og:url" content="https://limonte.github.io">
   <script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
 </head>
 <body>
   <div id="app">
@@ -134,7 +135,8 @@
       <span><strong>GitHub</strong></span>
       <div class="left-offset">
         Maintaining of the <br>
-        <i class="fa fa-star"></i>900+ <a href="https://github.com/limonte/sweetalert2">limonte/sweetalert2</a>
+        <i class="fa fa-star"></i>{{ sweetalert2.stargazers_count }}
+        <a href="{{ sweetalert2.html_url }}" target="_blank">{{ sweetalert2.full_name }}</a>
       </div>
       <div class="left-offset">
         600+ public contributions <br>
