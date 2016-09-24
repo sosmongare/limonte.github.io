@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
             ']</pre>' +
             '{{ name }}'+
           '</span>'
+      },
+      'icon': {
+        props: ['type'],
+        template: '<i class="fa fa-{{ type }}"></i>'
       }
     },
     methods: {

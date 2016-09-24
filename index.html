@@ -135,7 +135,7 @@
       <span><strong>GitHub</strong></span>
       <div class="left-offset">
         Maintaining of the <br>
-        <i class="fa fa-star"></i>{{ sweetalert2.stargazers_count }}
+        <icon type="star"></icon>{{ sweetalert2.stargazers_count }}
         <a href="{{ sweetalert2.html_url }}" target="_blank">{{ sweetalert2.full_name }}</a>
       </div>
       <div class="left-offset">
@@ -191,7 +191,7 @@
       <skill name="Excel know-how" level="13"></skill>
       <hr>
       <span><a href="https://english-online.rs">English-Online</a>, my side-project<br>
-      <i class="fa fa-trophy"></i> 1st place for "engleski jezik" <br> ("english language")</span>
+      <icon type="trophy"></icon> 1st place for "engleski jezik" <br> ("english language")</span>
     </div>
 
     <div class="skillBox api">
@@ -244,8 +244,8 @@
     </div>
 
     <div id="volume">
-      <i class="fa fa-volume-up" v-if="sound" @click="sound = false"></i>
-      <i class="fa fa-volume-off" v-else @click="sound = true"></i>
+      <icon type="volume-up" v-if="sound" @click="sound = false"></icon>
+      <icon type="volume-off" v-else @click="sound = true"></icon>
     </div>
   </div>
 
