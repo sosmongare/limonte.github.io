@@ -24,6 +24,16 @@ body {
   animation: svgLevitate 5s alternate ease-in-out infinite;
 }
 
+#trianglify {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0
+}
+
 @keyframes svgLevitate {
   0% { transform: translate(0, -50px); }
   100% { transform: translate(0, 0px); }

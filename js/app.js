@@ -74,6 +74,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     };
   }, false);
+
+  var pattern = Trianglify({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    cell_size: 100,
+    x_colors: ['#0B2631', '#000000', '#000000', '#010F1C'],
+    y_colors: ['#0B2631', '#000000', '#010F1C']
+  });
+  var trianglifyCanvas = pattern.canvas();
+  trianglifyCanvas.id = 'trianglify';
+  document.body.insertBefore(trianglifyCanvas, document.body.firstChild);
 });
 
 function symmetry(svg) {
