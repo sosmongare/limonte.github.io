@@ -9,6 +9,33 @@ document.addEventListener('DOMContentLoaded', function() {
   var vm = new Vue({
     el: '#app',
     data: data,
+    components: {
+      'skill': {
+        props: {
+          name: {
+            type: String
+          },
+          level: {
+            coerce: function(val) {
+              return parseInt(val, 10);
+            }
+          },
+          inactive: {
+            type: Boolean,
+            default: false
+          }
+        },
+        template:
+          '<span>' +
+            '<pre v-if="level">[' +
+              '<span v-for="n in level">=</span>' +
+              '<i v-if="!inactive">=</i><span v-else> </span>' +
+              '<span v-for="n in (19-level)"> </span>' +
+            ']</pre>' +
+            '{{ name }}'+
+          '</span>'
+      }
+    },
     created: function() {
       this.backgroundMusic.volume = 0.5;
       this.backgroundMusic.loop = true;

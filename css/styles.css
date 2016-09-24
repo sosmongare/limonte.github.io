@@ -108,6 +108,11 @@ body {
   margin: 20px 20px 20px 40px;
 }
 
+.skillBox .left-offset > span  {
+  display: block;
+  margin: 10px 10px 10px 0;
+}
+
 .skillBox hr {
   display: block;
   height: 1px;
