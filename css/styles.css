@@ -41,8 +41,8 @@ body {
 
 #volume {
   position: absolute;
-  bottom: .7em;
-  right: .7em;
+  bottom: 2%;
+  left: 46%;
   font-size: 3em;
   color: #663;
   width: 50px;
