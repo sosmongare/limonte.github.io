@@ -13,7 +13,7 @@
   <meta property="og:description" name="description" content="Full-Stack PHP/JS Developer">
   <meta property="og:image" content="/i/apple-touch-icon.png">
   <meta property="og:url" content="https://limonte.github.io">
-  <script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/vue/2.0.2/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
 </head>
 
@@ -24,27 +24,27 @@
     <div class="skillBox programming">
       <h2>Programming skills</h2>
       <span><strong>11+ years</strong> in &lt;web dev&gt;.</span>
-      <skill name="PHP" level="18"></skill>
-      <skill name="JS(ES6)" level="17"></skill>
-      <skill name="Python" level="9"></skill>
-      <skill name="Bash" level="12"></skill>
+      <skill name="PHP" :level="18"></skill>
+      <skill name="JS(ES6)" :level="17"></skill>
+      <skill name="Python" :level="9"></skill>
+      <skill name="Bash" :level="12"></skill>
       <hr>
-      <skill name="OOP" level="18"></skill>
-      <skill name="Architecture" level="16"></skill>
+      <skill name="OOP" :level="18"></skill>
+      <skill name="Architecture" :level="16"></skill>
       <hr>
-      <skill name="TDD" level="18"></skill>
-      <skill name="PHPUnit" level="16"></skill>
-      <skill name="Behat" level="15"></skill>
-      <skill name="QUnit" level="15"></skill>
+      <skill name="TDD" :level="18"></skill>
+      <skill name="PHPUnit" :level="16"></skill>
+      <skill name="Behat" :level="15"></skill>
+      <skill name="QUnit" :level="15"></skill>
     </div>
 
     <div class="skillBox db">
       <h2>Databases</h2>
-      <skill name="MySQL" level="17"></skill>
-      <skill name="PostgreSQL" level="15"></skill>
-      <skill name="Redis" level="10"></skill>
-      <skill name="MongoDB" level="10"></skill>
-      <skill name="SQLite" level="16" inactive></skill>
+      <skill name="MySQL" :level="17"></skill>
+      <skill name="PostgreSQL" :level="15"></skill>
+      <skill name="Redis" :level="10"></skill>
+      <skill name="MongoDB" :level="10"></skill>
+      <skill name="SQLite" :level="16" inactive></skill>
       <hr>
       <skill name="Normalization / Denormalization"></skill>
       <skill name="Keys and Constraints"></skill>
@@ -55,60 +55,58 @@
 
     <div class="skillBox frontend">
       <h2>Front-End skills</h2>
-      <skill name="HTML5" level="19"></skill>
-      <skill name="CSS3" level="19"></skill>
-      <skill name="SASS/LASS" level="16"></skill>
-      <skill name="Responsive" level="16"></skill>
-      <skill name="SVG" level="14"></skill>
-      <skill name="Animations" level="12"></skill>
+      <skill name="HTML5" :level="19"></skill>
+      <skill name="CSS3" :level="19"></skill>
+      <skill name="SASS/LASS" :level="16"></skill>
+      <skill name="Responsive" :level="16"></skill>
+      <skill name="SVG" :level="14"></skill>
+      <skill name="Animations" :level="12"></skill>
       <hr>
-      <skill name="NPM / Bower" level="19"></skill>
+      <skill name="NPM / Bower" :level="19"></skill>
       <hr>
-      <skill name="Webpack / Gulp" level="18"></skill>
+      <skill name="Webpack / Gulp" :level="18"></skill>
       <hr>
       <span>AJAX, JSON, XML, WebSocket</span>
     </div>
 
     <div class="skillBox backend-frameworks">
       <h2>Back-End frameworks</h2>
-      <span>
-        <pre>[==================<i>=</i> ]</pre>
-        <a href="http://stackoverflow.com/search?tab=votes&q=user%3a1331425%20%5blaravel%5d" class="so-badge-tag silver">
-          Laravel
-        </a>
-      </span>
-      <skill name="Lumen" level="17"></skill>
-      <skill name="Symfony" level="15"></skill>
-      <skill name="Silex" level="14"></skill>
-      <skill name="CodeIgniter" level="13" inactive></skill>
+      <skill
+        name="<i class='so-badge-tag silver'>Laravel</i>"
+        :level="18"
+        href="http://stackoverflow.com/search?tab=votes&q=user%3a1331425%20%5blaravel%5d"></skill>
+      <skill name="Lumen" :level="17"></skill>
+      <skill name="Symfony" :level="15"></skill>
+      <skill name="Silex" :level="14"></skill>
+      <skill name="CodeIgniter" :level="13" inactive></skill>
       <hr>
       <h2>CMS</h2>
       <div class="left-offset">
-        <skill name="WordPress" level="12" inactive></skill>
-        <skill name="OctoberCMS" level="10" inactive></skill>
+        <skill name="WordPress" :level="12" inactive></skill>
+        <skill name="OctoberCMS" :level="10" inactive></skill>
       </div>
     </div>
 
     <div class="skillBox frontend-frameworks">
       <h2>Frontend frameworks</h2>
-      <skill name="jQuery" level="18"></skill>
-      <skill name="AngularJS" level="16"></skill>
-      <skill name="Vue.js" level="16"></skill>
-      <skill name="Backbone.js" level="11" inactive></skill>
+      <skill name="jQuery" :level="18"></skill>
+      <skill name="AngularJS" :level="16"></skill>
+      <skill name="Vue.js" :level="16"></skill>
+      <skill name="Backbone.js" :level="11" inactive></skill>
       <hr>
-      <skill name="Bootstrap" level="17"></skill>
-      <skill name="Semantic UI" level="15"></skill>
-      <skill name="Polymer" level="15"></skill>
-      <skill name="Pure.css" level="10"></skill>
+      <skill name="Bootstrap" :level="17"></skill>
+      <skill name="Semantic UI" :level="15"></skill>
+      <skill name="Polymer" :level="15"></skill>
+      <skill name="Pure.css" :level="10"></skill>
     </div>
 
     <div class="skillBox design">
       <h2>Design</h2>
-      <skill name="Photoshop" level="10"></skill>
-      <skill name="PSD -> markup" level="16"></skill>
-      <skill name="UI" level="17"></skill>
-      <skill name="UX" level="18"></skill>
-      <skill name="Responsive design" level="18"></skill>
+      <skill name="Photoshop" :level="10"></skill>
+      <skill name="PSD -> markup" :level="16"></skill>
+      <skill name="UI" :level="17"></skill>
+      <skill name="UX" :level="18"></skill>
+      <skill name="Responsive design" :level="18"></skill>
     </div>
 
     <div class="skillBox security">
@@ -141,14 +139,14 @@
       <div class="left-offset">
         Maintaining of the <br>
         <icon type="star"></icon>{{ sweetalert2.stargazers_count }}
-        <a href="{{ sweetalert2.html_url }}" target="_blank">{{ sweetalert2.full_name }}</a>
+        <a :href="sweetalert2.html_url" target="_blank">{{ sweetalert2.full_name }}</a>
       </div>
       <div class="left-offset">
         900+ public contributions <br>
         in the last year
       </div>
       <hr>
-      <skill name="Code Review" level="18"></skill>
+      <skill name="Code Review" :level="18"></skill>
       <hr>
       <span>TDD, SDLC, Scrum</span>
     </div>
@@ -156,8 +154,8 @@
     <div class="skillBox server-administration">
       <h2>System administration</h2>
       <span><strong>7+ years</strong> of maintaining <br> Linux servers.</span>
-      <skill name="NGinx" level="18"></skill>
-      <skill name="Apache" level="14" inactive></skill>
+      <skill name="NGinx" :level="18"></skill>
+      <skill name="Apache" :level="14" inactive></skill>
       <hr>
       <span>Memcached, APC, OpCache</span>
       <hr>
@@ -166,16 +164,16 @@
 
     <div class="skillBox tools">
       <h2>OS, WebDev tools</h2>
-      <skill name="Linux" level="18"></skill>
-      <skill name="Mac OS X" level="12"></skill>
-      <skill name="Windows" level="15"></skill>
+      <skill name="Linux" :level="18"></skill>
+      <skill name="Mac OS X" :level="12"></skill>
+      <skill name="Windows" :level="15"></skill>
       <hr>
       <span><strong>Package management</strong></span>
       <div class="left-offset">
         apt / rpm / brew
       </div>
       <hr>
-      <skill name="Git" level="19"></skill>
+      <skill name="Git" :level="19"></skill>
       <hr>
       <span>GitHub / BitBucket / GitLab</span>
       <hr>
@@ -186,16 +184,16 @@
 
     <div class="skillBox seo">
       <h2>SEO</h2>
-      <skill name="HTML o10n" level="19"></skill>
-      <skill name="AJAX crawling" level="17"></skill>
-      <skill name="Webmaster Tools" level="14"></skill>
+      <skill name="HTML o10n" :level="19"></skill>
+      <skill name="AJAX crawling" :level="17"></skill>
+      <skill name="Webmaster Tools" :level="14"></skill>
       <hr>
       <span>HTTP status codes</span>
       <span>URL best practices</span>
       <span>robots.txt, sitemap.xml</span>
       <hr>
-      <skill name="Google Analytics" level="15"></skill>
-      <skill name="Excel know-how" level="13"></skill>
+      <skill name="Google Analytics" :level="15"></skill>
+      <skill name="Excel know-how" :level="13"></skill>
       <hr>
       <span><a href="https://english-online.rs">English-Online</a>, my side-project<br>
       <icon type="trophy"></icon> 1st place for "engleski jezik" <br> ("english language")</span>
@@ -222,11 +220,11 @@
         PageSpeed Insights rating
       </span>
       <hr>
-      <skill name="NGinx o10n" level="17"></skill>
-      <skill name="Caching" level="15"></skill>
-      <skill name="Compression" level="17"></skill>
-      <skill name="CSS/JS delivery" level="18"></skill>
-      <skill name="Combining assets" level="18"></skill>
+      <skill name="NGinx o10n" :level="17"></skill>
+      <skill name="Caching" :level="15"></skill>
+      <skill name="Compression" :level="17"></skill>
+      <skill name="CSS/JS delivery" :level="18"></skill>
+      <skill name="Combining assets" :level="18"></skill>
       <hr>
       <span>HTTP/2</span>
     </div>
@@ -235,24 +233,24 @@
       <h2>Communication</h2>
       <span>English:</span>
       <div class="left-offset">
-        <skill name="reading" level="17"></skill>
+        <skill name="reading" :level="17"></skill>
       </div>
       <div class="left-offset">
-        <skill name="writing" level="16"></skill>
+        <skill name="writing" :level="16"></skill>
       </div>
       <div class="left-offset">
-        <skill name="writing" level="15"></skill>
+        <skill name="writing" :level="15"></skill>
       </div>
       <hr>
-      <skill name="Russian (native)" level="19"></skill>
-      <skill name="Serbian/Croatian" level="17"></skill>
+      <skill name="Russian (native)" :level="19"></skill>
+      <skill name="Serbian/Croatian" :level="17"></skill>
       <hr>
       <span>Trello / FlowDock / Slack</span>
     </div>
 
     <div id="volume">
-      <icon type="volume-up" v-if="sound" @click="sound = false"></icon>
-      <icon type="volume-off" v-else @click="sound = true"></icon>
+      <span @click="sound = false" v-if="sound"><icon type="volume-up"></icon></span>
+      <span @click="sound = true" v-else ><icon type="volume-off"></icon></span>
     </div>
   </div>
 

@@ -3,13 +3,14 @@
   margin: 0;
 }
 
-html, body {
+html {
   height: 100%;
 }
 
 body {
   background: #000;
   position: relative;
+  min-height: 100%;
 }
 
 #svg {
@@ -129,8 +130,11 @@ pre {
   float: right;
 }
 
-pre i {
+i {
   font-style: normal;
+}
+
+pre i {
   animation: blinker 1s linear infinite;
 }
 
