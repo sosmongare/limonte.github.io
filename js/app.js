@@ -57,6 +57,13 @@ document.addEventListener('DOMContentLoaded', function () {
         this.backgroundMusic.play()
       }
       this.fetchData()
+      this.$http.get('alien.ascii').then(function (response) {
+        var blobReader = new FileReader()
+        blobReader.readAsText(response.data)
+        blobReader.onloadend = function (e) {
+          console.log(e.srcElement.result)
+        }
+      })
     }
   })
 
@@ -183,19 +190,3 @@ function symmetry (svg) {
     symmetryTarget.appendChild(flipped)
   }
 }
-
-console.log(`        ..
-      ..  ..
-            ..
-             ..
-            ..
-           ..
-         ..
-##       ..   ####
-##............##  ##
-##...COFFEE...##   ##
-##..KEEPS.ME..## ##
-##....WARM....###
- ##...........##
-  ############
-`)
