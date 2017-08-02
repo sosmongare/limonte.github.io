@@ -1,4 +1,4 @@
-/* global Audio, Vue, TinyAnimate, Trianglify, localStorage */
+/* global Audio, Vue, TinyAnimate, Trianglify, FileReader, localStorage */
 'use strict'
 
 document.addEventListener('DOMContentLoaded', function () {
