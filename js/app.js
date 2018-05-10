@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
           href: {
             type: String
           },
+          rel: {
+            type: String
+          },
+          target: {
+            type: String
+          },
           level: {
             type: Number
           },
@@ -35,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
               '<i v-if="!inactive">=</i><span v-else>&nbsp;</span>' +
               '<span v-for="n in (19-level)">&nbsp;</span>' +
             ']</pre>' +
-            '<a v-if="href" :href="href" v-html="name"></a><i v-else v-html="name"></i>' +
+            '<a v-if="href" :href="href" :rel="rel" :target="target" v-html="name"></a><i v-else v-html="name"></i>' +
           '</span>'
       },
       'icon': {
