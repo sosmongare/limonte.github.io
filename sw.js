@@ -1,24 +1,12 @@
-/* eslint-env worker */
+/* eslint-env serviceworker */
 
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open('limonte').then(cache => {
-      return cache.addAll([
-        '/'
-      ])
-      .then(() => self.skipWaiting())
-    })
-  )
-})
+importScripts('https://cdn.jsdelivr.net/npm/workbox-sw@2.1.3/build/importScripts/workbox-sw.prod.v2.1.3.min.js')
 
-self.addEventListener('activate', e => {
-  e.waitUntil(self.clients.claim())
-})
+const workboxSW = new self.WorkboxSW()
 
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(response => {
-      return response || fetch(e.request)
-    })
-  )
-})
+workboxSW.router.registerRoute(
+  function () {
+    return true
+  },
+  workboxSW.strategies.networkFirst()
+)
