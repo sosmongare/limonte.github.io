@@ -200,7 +200,3 @@ function symmetry (svg) {
     symmetryTarget.appendChild(flipped)
   }
 }
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js', {scope: '/'})
-}
