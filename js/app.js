@@ -57,13 +57,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     created: function () {
-      this.backgroundMusic.volume = 0.5
-      this.backgroundMusic.loop = true
-      if (this.sound) {
-        this.backgroundMusic.play()
+      var app = this
+      app.backgroundMusic.volume = 0.5
+      app.backgroundMusic.loop = true
+      if (app.sound) {
+        app.backgroundMusic.play().catch(function (e) {
+          // autoplay was blocked
+          app.sound = false
+        })
       }
-      this.fetchData()
-      this.$http.get('alien.ascii').then(function (response) {
+      app.fetchData()
+      app.$http.get('alien.ascii').then(function (response) {
         var blobReader = new FileReader()
         blobReader.readAsText(response.data)
         blobReader.onloadend = function (e) {
